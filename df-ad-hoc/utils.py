@@ -22,7 +22,7 @@ def dataFrameFromSparqlResult(result, removePref) -> pd.DataFrame:
             val = r[f]["value"]
             if removePref:
                 # частный случай, не универсально
-                val = val.split("#")[-1].split("/")[-1]#.split(".")[-1]
+                val = val.split("#")[-1].split("/")[-1].split(".")[-1]
             row.append(val)
             if i > len(titles):
                 titles.append(f)
