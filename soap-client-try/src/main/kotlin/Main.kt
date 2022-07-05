@@ -1,27 +1,24 @@
+import jakarta.xml.ws.BindingProvider
 import sk11.*
+import test.*
 
 
 fun main(args: Array<String>) {
     println("Hello World!")
         //val x=Test1()
- val s=Service().basicHttpBindingIService.getData(12)
+    val v=Service().basicHttpBindingIService.getData(12)
+    val port = SdmService_Service().getSdmService()
+    val prov = port as BindingProvider
 
-    val request=GetData().apply {
-        value=12
-    }
+    prov.requestContext[BindingProvider.USERNAME_PROPERTY] = "demo\\volgarevael"
+    prov.requestContext[BindingProvider.PASSWORD_PROPERTY] = "75p127na"
+    var x=port.getActualModelVersion(
 
-
-
-
-
-
-
+        GetActualModelVersionRequest()
+    )
 
 
 
-
-
-//    val s=c.sdmService.getObjects()
 //    val service = SdmService()
 
 //    val response = port.someFunction(request)
