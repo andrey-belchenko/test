@@ -1,11 +1,24 @@
-import sk11.SdmService
-import sk11.SdmService_Service
+import sk11.*
+
 
 fun main(args: Array<String>) {
     println("Hello World!")
         //val x=Test1()
+ val s=Service().basicHttpBindingIService.getData(12)
 
-    val c=SdmService_Service()
+    val request=GetData().apply {
+        value=12
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 //    val s=c.sdmService.getObjects()

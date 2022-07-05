@@ -66,8 +66,9 @@ task("wsimport-myservice") {
                 "keep" to true,
                 "Xnocompile" to true,
                 "sourcedestdir" to sourcedestdir,
-                "wsdl" to "C:\\Repos\\mygithub\\test\\soap-client-try\\src\\main\\resources\\wsdl\\SdmService.wsdl",
-//                "wsdlLocation" to "http://localhost/wsdl/SomeService.wsdl",
+                "wsdl" to "C:\\Repos\\mygithub\\test\\soap-client-try\\src\\main\\resources\\wsdl\\TestService.wsdl",
+                //"wsdl" to "C:\\Repos\\mygithub\\test\\soap-client-try\\src\\main\\resources\\wsdl\\SdmService.wsdl",
+                //"wsdlLocation" to "http://localhost:3924/WelcomeWCFService.svc?wsdl",
                 "package" to "sk11"
             ) {
                 "xjcarg"("value" to "-XautoNameResolution")
